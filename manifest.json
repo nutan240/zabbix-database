@@ -1,0 +1,38 @@
+{
+	"manifest_version": 2,
+	"id": "sqlexplorer",
+	"name": "SQL Explorer",
+	"author": "gr8b",
+	"description": "Make SQL queries and export results to .csv files",
+	"version": "1.12",
+	"namespace": "SqlExplorer",
+	"url": "https://github.com/gr8b/zabbix-module-sqlexplorer",
+	"actions": {
+		"sqlexplorer.form": {
+			"class": "SqlForm",
+			"view": "sql.form.view"
+		},
+		"sqlexplorer.queries": {
+			"class": "StoredSql",
+			"layout": "layout.json"
+		},
+		"sqlexplorer.csv": {
+			"class": "SqlForm",
+			"layout": "layout.csv"
+		},
+		"sqlexplorer.config": {
+			"class": "SqlConfig",
+			"layout": "layout.json",
+			"view": "sqlexplorer.config.form"
+		},
+		"sqlexplorer.config.export": {
+			"class": "SqlConfigExport",
+			"layout": "layout.text"
+		},
+		"sqlexplorer.config.import": {
+			"class": "SqlConfigImport",
+			"layout": "layout.json"
+		}
+	},
+	"connection": ""
+}
